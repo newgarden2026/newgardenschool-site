@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>New Garden School | Where Every Child Matters!</title>
+  <title>New Garden School | Stutterheim, Eastern Cape</title>
   <meta name="description" content="New Garden School offers quality education from Grade R to 9 in Stutterheim, Eastern Cape.">
-  <link rel="canonical" href="https://newgardenschool.org/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -43,7 +42,7 @@ a{text-decoration:none;}
 .ft-bullet{height:15px;width:15px;object-fit:contain;flex-shrink:0;margin-top:3px;opacity:0.55;filter:brightness(3);}
 
 /* TOP BAR */
-.top-bar{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--maroon-deep);height:var(--top-h);display:flex;align-items:center;padding:0 1.5rem;transition:transform 0.3s;}
+.top-bar{position:fixed;top:0;left:0;right:0;z-index:1001;background:var(--maroon-deep);height:var(--top-h);display:flex;align-items:center;padding:0 1.5rem;}
 .tbi{max-width:1200px;width:100%;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
 .tb-left{font-size:0.7rem;color:rgba(255,255,255,0.58);letter-spacing:0.05em;}
 .tb-right{display:flex;align-items:center;gap:1rem;}
@@ -55,7 +54,7 @@ a{text-decoration:none;}
 .safety-btn:hover{background:rgba(255,255,255,0.22);}
 
 /* MAIN NAV */
-.main-nav{position:fixed;top:var(--top-h);left:0;right:0;z-index:900;background:var(--maroon);height:var(--nav-h);display:flex;align-items:center;padding:0 1.5rem;box-shadow:0 2px 14px rgba(0,0,0,0.28);}
+.main-nav{position:fixed;top:var(--top-h);left:0;right:0;z-index:1000;background:var(--maroon);height:var(--nav-h);display:flex;align-items:center;padding:0 1.5rem;box-shadow:0 2px 14px rgba(0,0,0,0.28);}
 .nav-inner{max-width:1200px;width:100%;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
 .nav-brand{display:flex;align-items:center;gap:12px;}
 .nav-brand-text{font-family:'Merriweather',serif;font-size:1rem;font-weight:700;color:white;line-height:1.15;}
@@ -734,15 +733,6 @@ a{text-decoration:none;}
     btn.classList.add('active');
     document.getElementById('pp-'+n).classList.add('active');
   }
-  // Scroll-hide top bar
-  let lastY=0;
-  const tb=document.getElementById('topBar');
-  window.addEventListener('scroll',()=>{
-    const y=window.scrollY;
-    tb.style.transform=y>80&&y>lastY?'translateY(-100%)':'translateY(0)';
-    tb.style.transition='transform 0.3s';
-    lastY=y;
-  });
   // Reveal
   const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');}),{threshold:0.1});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
