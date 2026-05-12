@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | New Garden School</title>
+  <meta name="description" content="Learn about New Garden School — our history, principal, mission, values, team and safety measures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+<style>
+:root {
+  --maroon:      #7a1a1a;
+  --maroon-deep: #5c1010;
+  --maroon-mid:  #9b2424;
+  --red-light:   #c0392b;
+  --grey-dark:   #2d2d2d;
+  --grey-mid:    #555;
+  --grey-light:  #f4f4f4;
+  --grey-border: #e0e0e0;
+  --cream:       #faf8f6;
+  --muted:       #666;
+  --text:        #1a1a1a;
+  --white:       #ffffff;
+  --shadow-sm:   0 1px 4px rgba(0,0,0,0.08);
+  --shadow-md:   0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg:   0 10px 40px rgba(0,0,0,0.14);
+  --top-h:       36px;
+  --nav-h:       64px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);line-height:1.7;}
+h1,h2,h3,h4{font-family:'Merriweather',serif;line-height:1.2;}
+a{text-decoration:none;}
+
+/* LOGO */
+.ngs-logo{height:42px;width:42px;object-fit:contain;display:block;}
+.ngs-logo-sm{height:20px;width:20px;object-fit:contain;display:inline-block;}
+.ft-bullet{height:15px;width:15px;object-fit:contain;flex-shrink:0;margin-top:3px;opacity:0.55;filter:brightness(3);}
+
+/* TOP BAR */
+.top-bar{position:fixed;top:0;left:0;right:0;z-index:1001;background:var(--maroon-deep);height:var(--top-h);display:flex;align-items:center;padding:0 1.5rem;}
+.tbi{max-width:1200px;width:100%;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+.tb-left{font-size:0.7rem;color:rgba(255,255,255,0.58);letter-spacing:0.05em;}
+.tb-right{display:flex;align-items:center;gap:1rem;}
+.tb-link{font-size:0.7rem;color:rgba(255,255,255,0.7);transition:color 0.15s;display:flex;align-items:center;gap:0.3rem;letter-spacing:0.04em;}
+.tb-link:hover{color:white;}
+.tb-link i{font-size:0.72rem;}
+.tb-div{width:1px;height:12px;background:rgba(255,255,255,0.18);}
+.safety-btn{font-size:0.68rem;font-weight:600;background:rgba(255,255,255,0.12);color:white;border:1px solid rgba(255,255,255,0.25);padding:0.15rem 0.65rem;cursor:pointer;letter-spacing:0.05em;transition:background 0.2s;}
+.safety-btn:hover{background:rgba(255,255,255,0.22);}
+
+/* MAIN NAV */
+.main-nav{position:fixed;top:var(--top-h);left:0;right:0;z-index:1000;background:var(--maroon);height:var(--nav-h);display:flex;align-items:center;padding:0 1.5rem;box-shadow:0 2px 14px rgba(0,0,0,0.28);}
+.nav-inner{max-width:1200px;width:100%;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:12px;}
+.nav-brand-text{font-family:'Merriweather',serif;font-size:1rem;font-weight:700;color:white;line-height:1.15;}
+.nav-brand-text small{display:block;font-family:'Inter',sans-serif;font-size:0.58rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);}
+.nav-links{display:flex;align-items:center;list-style:none;gap:0;}
+.nav-links>li>a,.nav-links>li>.nav-tog{display:flex;align-items:center;gap:0.25rem;color:rgba(255,255,255,0.85);font-size:0.8rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:0 1rem;height:var(--nav-h);transition:background 0.15s,color 0.15s;border:none;background:none;cursor:pointer;}
+.nav-links>li>a:hover,.nav-links>li>.nav-tog:hover{background:rgba(255,255,255,0.1);color:white;}
+.nav-links>li>a.active{border-bottom:3px solid rgba(255,255,255,0.8);}
+.has-dd{position:relative;}
+.dd-menu{position:absolute;top:100%;left:0;background:white;min-width:190px;border-top:3px solid var(--maroon);box-shadow:var(--shadow-lg);display:none;flex-direction:column;z-index:999;}
+.has-dd:hover .dd-menu,.has-dd:focus-within .dd-menu{display:flex;}
+.dd-menu a{padding:0.65rem 1.1rem;font-size:0.82rem;font-weight:500;color:var(--grey-dark);border-bottom:1px solid var(--grey-border);transition:background 0.15s,color 0.15s;}
+.dd-menu a:last-child{border-bottom:none;}
+.dd-menu a:hover{background:#fdf0f0;color:var(--maroon);}
+.nav-cta{background:white!important;color:var(--maroon)!important;margin-left:0.5rem;padding:0 1.1rem!important;height:36px!important;border-radius:2px!important;font-weight:700!important;}
+.nav-cta:hover{background:#fdf0f0!important;}
+.nav-ham{display:none;background:none;border:none;color:white;font-size:1.5rem;cursor:pointer;}
+.mob-nav{display:none;position:fixed;top:calc(var(--top-h) + var(--nav-h));left:0;right:0;background:var(--maroon-deep);z-index:890;box-shadow:var(--shadow-lg);}
+.mob-nav.open{display:block;}
+.mob-nav a{display:block;padding:0.7rem 1.5rem;color:rgba(255,255,255,0.82);font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;border-bottom:1px solid rgba(255,255,255,0.06);transition:background 0.15s;}
+.mob-nav a:hover{background:rgba(255,255,255,0.09);color:white;}
+@media(max-width:900px){.nav-links{display:none;}.nav-ham{display:block;}}
+.page-top{padding-top:calc(var(--top-h) + var(--nav-h));}
+
+/* ── SECTION SYSTEM (from index) ── */
+.sec{padding:5rem 1.5rem;}
+.sec-inner{max-width:1200px;margin:0 auto;}
+.sec-white{background:var(--white);}
+.sec-grey{background:var(--grey-light);}
+.sec-cream{background:var(--cream);}
+.sec-dark{background:var(--grey-dark);}
+.sec-maroon{background:var(--maroon);}
+.sec-label{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--maroon);margin-bottom:0.65rem;}
+.sec-label::before{content:'';display:block;width:22px;height:2px;background:var(--maroon);}
+.sec-label.w{color:rgba(255,255,255,0.5);}
+.sec-label.w::before{background:rgba(255,255,255,0.4);}
+.sec-title{font-size:clamp(1.55rem,3.5vw,2.3rem);font-weight:700;color:var(--grey-dark);line-height:1.2;margin-bottom:0.85rem;}
+.sec-title.w{color:white;}
+.sec-desc{font-size:0.95rem;color:var(--muted);line-height:1.75;max-width:640px;}
+.sec-desc.w{color:rgba(255,255,255,0.62);}
+.rule{width:38px;height:3px;background:var(--maroon);margin:0.9rem 0 1.4rem;}
+.rule.w{background:rgba(255,255,255,0.4);}
+.t-center{text-align:center;}
+.t-center .rule,.t-center .sec-label{margin-left:auto;margin-right:auto;}
+.t-center .sec-label{display:inline-flex;}
+.btn-p{display:inline-flex;align-items:center;gap:0.4rem;background:var(--maroon);color:white;padding:0.62rem 1.5rem;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;transition:background 0.18s,transform 0.18s;border:none;cursor:pointer;}
+.btn-p:hover{background:var(--maroon-mid);transform:translateY(-1px);color:white;}
+.btn-o{display:inline-flex;align-items:center;gap:0.4rem;border:2px solid var(--maroon);color:var(--maroon);padding:0.6rem 1.5rem;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.18s;}
+.btn-o:hover{background:var(--maroon);color:white;}
+.info-list{list-style:none;margin-top:1.3rem;}
+.info-list li{display:flex;gap:0.65rem;align-items:flex-start;padding:0.5rem 0;border-bottom:1px solid var(--grey-border);font-size:0.88rem;color:var(--muted);}
+.info-list li:last-child{border-bottom:none;}
+.info-list li img{flex-shrink:0;width:16px;height:16px;object-fit:contain;margin-top:3px;opacity:0.4;}
+.info-list li strong{color:var(--grey-dark);}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.two-col.rev{direction:rtl;}
+.two-col.rev>*{direction:ltr;}
+@media(max-width:820px){.two-col,.two-col.rev{grid-template-columns:1fr;direction:ltr;gap:2.5rem;}}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+/* ── PAGE HERO (about-specific) ── */
+.page-hero{
+  background:linear-gradient(110deg,var(--maroon-deep) 0%,var(--maroon) 50%,#3a1010 100%);
+  padding:4.5rem 1.5rem 3.5rem;
+  position:relative;overflow:hidden;
+}
+.page-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:380px;height:380px;border-radius:50%;background:rgba(255,255,255,0.03);}
+.page-hero::after{content:'';position:absolute;bottom:-80px;left:-40px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,0.025);}
+.ph-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1;}
+.ph-breadcrumb{display:flex;align-items:center;gap:0.5rem;margin-bottom:1.2rem;}
+.ph-breadcrumb a{font-size:0.72rem;font-weight:600;color:rgba(255,255,255,0.5);letter-spacing:0.06em;text-transform:uppercase;transition:color 0.15s;}
+.ph-breadcrumb a:hover{color:white;}
+.ph-breadcrumb span{font-size:0.72rem;color:rgba(255,255,255,0.3);}
+.ph-eyebrow{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.9rem;}
+.ph-eyebrow::before{content:'';display:block;width:22px;height:2px;background:rgba(255,255,255,0.35);}
+.ph-title{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;color:white;line-height:1.08;margin-bottom:0.9rem;max-width:640px;}
+.ph-sub{font-size:0.98rem;color:rgba(255,255,255,0.65);max-width:540px;line-height:1.75;}
+.ph-pills{display:flex;flex-wrap:wrap;gap:0.55rem;margin-top:1.8rem;}
+.ph-pill{display:inline-flex;align-items:center;gap:0.35rem;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.8);padding:0.3rem 0.85rem;font-size:0.72rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.18s;}
+.ph-pill:hover{background:rgba(255,255,255,0.18);color:white;}
+/* bg image overlay */
+.page-hero-img{position:absolute;inset:0;background:url('img-building.jpg') center 40%/cover no-repeat;}
+.page-hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(92,16,16,0.92) 0%,rgba(92,16,16,0.75) 50%,rgba(30,10,10,0.7) 100%);}
+
+/* ── HISTORY SECTION ── */
+.hist-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start;}
+@media(max-width:820px){.hist-grid{grid-template-columns:1fr;gap:2.5rem;}}
+.hist-visual{position:relative;}
+.hist-img-block{border:1px solid var(--grey-border);aspect-ratio:4/3;overflow:hidden;position:relative;background:var(--maroon-deep);display:flex;align-items:center;justify-content:center;}
+.hist-img-block img.hist-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:0.75;}
+.hist-img-block img.hist-logo{width:36%;opacity:0.25;object-fit:contain;position:relative;z-index:1;}
+.hist-yr-badge{position:absolute;bottom:0;right:0;background:var(--maroon-deep);color:white;padding:0.65rem 1.1rem;font-family:'Merriweather',serif;font-size:1.3rem;font-weight:900;z-index:2;}
+.hist-yr-badge small{display:block;font-family:'Inter',sans-serif;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:400;opacity:0.65;}
+.hist-stats{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:0;border:1px solid var(--grey-border);border-top:none;}
+.hs-item{padding:1rem 1.2rem;border-right:1px solid var(--grey-border);text-align:center;}
+.hs-item:last-child{border-right:none;}
+.hs-num{font-family:'Merriweather',serif;font-size:1.8rem;font-weight:900;color:var(--maroon);line-height:1;}
+.hs-lbl{font-size:0.65rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-top:0.1rem;}
+
+/* Timeline */
+.timeline{margin-top:2rem;border-left:2px solid var(--grey-border);padding-left:1.6rem;}
+.tl-item{position:relative;margin-bottom:1.6rem;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-item::before{content:'';position:absolute;left:-1.95rem;top:0.35rem;width:10px;height:10px;border-radius:50%;background:var(--maroon);border:2px solid var(--white);box-shadow:0 0 0 2px var(--maroon);}
+.tl-year{font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--maroon);margin-bottom:0.15rem;}
+.tl-text{font-size:0.86rem;color:var(--muted);line-height:1.6;}
+
+/* More history expandable */
+.more-hist-bar{background:var(--cream);border:1px solid var(--grey-border);border-top:3px solid var(--maroon);padding:1.6rem 2rem;margin-top:0;}
+.mh-inner{max-width:1200px;margin:0 auto;}
+.mh-stats{display:flex;gap:2.5rem;flex-wrap:wrap;margin:1.2rem 0;}
+.mh-stat{text-align:center;}
+.mh-num{font-family:'Merriweather',serif;font-size:1.65rem;font-weight:900;color:var(--maroon);line-height:1;}
+.mh-lbl{font-size:0.62rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);}
+#mhText{display:none;}
+#mhText.open{display:block;}
+.expand-btn{display:inline-flex;align-items:center;gap:0.4rem;background:none;border:2px solid var(--maroon);color:var(--maroon);padding:0.45rem 1.1rem;font-family:'Inter',sans-serif;font-size:0.76rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;transition:all 0.18s;margin-top:0.6rem;}
+.expand-btn:hover{background:var(--maroon);color:white;}
+
+/* ── PRINCIPAL ── */
+.principal-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+@media(max-width:820px){.principal-grid{grid-template-columns:1fr;gap:2.5rem;}}
+.principal-card{background:var(--maroon);color:white;padding:2.4rem 2rem;position:relative;overflow:hidden;border-top:4px solid var(--red-light);}
+.principal-card::before{content:'\201C';position:absolute;top:-1rem;right:1rem;font-family:'Merriweather',serif;font-size:12rem;color:rgba(255,255,255,0.05);line-height:1;pointer-events:none;}
+.pc-avatar{width:72px;height:72px;background:rgba(255,255,255,0.12);overflow:hidden;margin-bottom:1.2rem;display:flex;align-items:center;justify-content:center;}
+.pc-avatar img{width:100%;height:100%;object-fit:contain;opacity:0.55;}
+.pc-name{font-family:'Merriweather',serif;font-size:1.25rem;font-weight:700;color:white;margin-bottom:0.2rem;}
+.pc-role{font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:1rem;}
+.pc-badge{display:inline-flex;align-items:center;gap:0.35rem;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:0.2rem 0.75rem;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.75);margin-bottom:1.3rem;}
+.pc-quote{font-family:'Merriweather',serif;font-size:0.95rem;font-style:italic;font-weight:300;color:rgba(255,255,255,0.85);line-height:1.7;border-left:3px solid rgba(255,255,255,0.25);padding-left:1rem;}
+.phil-cards{display:flex;flex-direction:column;gap:0.9rem;margin-top:1.5rem;}
+.phil-card{background:white;border:1px solid var(--grey-border);border-left:3px solid var(--maroon);padding:1rem 1.2rem;display:flex;gap:0.9rem;align-items:flex-start;transition:box-shadow 0.2s;}
+.phil-card:hover{box-shadow:var(--shadow-sm);}
+.phil-icon{flex-shrink:0;width:32px;height:32px;background:var(--grey-light);display:flex;align-items:center;justify-content:center;}
+.phil-icon img{width:18px;height:18px;object-fit:contain;opacity:0.5;}
+.phil-title{font-weight:700;font-size:0.85rem;color:var(--grey-dark);margin-bottom:0.15rem;}
+.phil-desc{font-size:0.8rem;color:var(--muted);line-height:1.6;}
+
+/* ── MISSION ── */
+.mission-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:1.3rem;margin-top:2.2rem;}
+@media(max-width:600px){.mission-cards{grid-template-columns:1fr;}}
+.mc{background:white;border:1px solid var(--grey-border);border-top:3px solid var(--maroon);padding:1.5rem 1.4rem;transition:box-shadow 0.2s,transform 0.2s;}
+.mc:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);}
+.mc-icon{width:28px;height:28px;object-fit:contain;margin-bottom:0.8rem;opacity:0.4;}
+.mc-title{font-family:'Merriweather',serif;font-size:0.95rem;font-weight:700;color:var(--grey-dark);margin-bottom:0.4rem;}
+.mc-text{font-size:0.82rem;color:var(--muted);line-height:1.65;}
+.caps-strip{display:inline-flex;align-items:center;gap:0.6rem;margin-top:2rem;background:var(--grey-light);border:1px solid var(--grey-border);padding:0.55rem 1.1rem;font-size:0.75rem;font-weight:600;color:var(--grey-mid);letter-spacing:0.04em;}
+.caps-strip i{color:var(--maroon);}
+
+/* ── VALUES ── */
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.2rem;}
+@media(max-width:768px){.values-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:460px){.values-grid{grid-template-columns:1fr;}}
+.vc{background:white;border:1px solid var(--grey-border);padding:1.5rem 1.2rem;text-align:center;transition:border-color 0.2s,box-shadow 0.2s,transform 0.2s;}
+.vc:hover{border-color:var(--maroon);box-shadow:var(--shadow-sm);transform:translateY(-2px);}
+.vc-icon{width:56px;height:56px;margin:0 auto 0.75rem;object-fit:contain;}
+.vc-name{font-weight:700;font-size:0.82rem;color:var(--grey-dark);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.35rem;}
+.vc-desc{font-size:0.78rem;color:var(--muted);line-height:1.6;}
+
+/* ── TEAM ── */
+.team-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem;}
+.ts-strip{display:flex;gap:2rem;flex-wrap:wrap;}
+.ts-stat{text-align:center;}
+.ts-num{font-family:'Merriweather',serif;font-size:2rem;font-weight:900;color:var(--maroon);line-height:1;}
+.ts-lbl{font-size:0.62rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);}
+.group-label{display:flex;align-items:center;gap:0.8rem;font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--maroon);margin:2.5rem 0 1.2rem;padding-bottom:0.5rem;border-bottom:2px solid var(--grey-border);}
+.group-label::before{content:'';display:block;width:18px;height:2px;background:var(--maroon);}
+.smt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;}
+@media(max-width:860px){.smt-grid{grid-template-columns:repeat(2,1fr);}}
+.staff-grid-3{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;}
+@media(max-width:900px){.staff-grid-3{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:560px){.staff-grid-3{grid-template-columns:repeat(2,1fr);}}
+.phase-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
+@media(max-width:860px){.phase-grid-4{grid-template-columns:repeat(2,1fr);}}
+.phase-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+@media(max-width:600px){.phase-grid-3{grid-template-columns:1fr;}}
+
+/* Person cards */
+.pcard{background:white;border:1px solid var(--grey-border);overflow:hidden;transition:box-shadow 0.2s,transform 0.2s;position:relative;}
+.pcard:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);border-color:var(--maroon);}
+.pcard.memorial{border-top:3px solid var(--red-light);}
+.pcard-avatar{height:90px;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;transition:height 0.4s cubic-bezier(0.34,1.2,0.64,1);}
+.pcard:hover .pcard-avatar{height:180px;}
+.smt-card .pcard-avatar{height:110px;}
+.smt-card:hover .pcard-avatar{height:200px;}
+/* colour stripes per card index — using nth-child cycling */
+.pcard:nth-child(1) .pcard-avatar{background:linear-gradient(135deg,var(--maroon-deep),var(--maroon));}
+.pcard:nth-child(2) .pcard-avatar{background:linear-gradient(135deg,#1e3a2a,#2d5c3e);}
+.pcard:nth-child(3) .pcard-avatar{background:linear-gradient(135deg,#1a2a3a,#2a4a6a);}
+.pcard:nth-child(4) .pcard-avatar{background:linear-gradient(135deg,#2a1a10,#5a3010);}
+.pcard:nth-child(5) .pcard-avatar{background:linear-gradient(135deg,var(--maroon-deep),var(--maroon));}
+.pcard:nth-child(6) .pcard-avatar{background:linear-gradient(135deg,#1e3a2a,#2d5c3e);}
+.pcard:nth-child(7) .pcard-avatar{background:linear-gradient(135deg,#1a2a3a,#2a4a6a);}
+.pcard:nth-child(8) .pcard-avatar{background:linear-gradient(135deg,#2a1a10,#5a3010);}
+.pcard-avatar img{width:52px;height:52px;object-fit:contain;filter:brightness(5);opacity:0.2;transition:transform 0.4s,width 0.4s,height 0.4s;position:relative;z-index:1;}
+.pcard:hover .pcard-avatar img{transform:scale(1.08);width:64px;height:64px;opacity:0.25;}
+.pcard-avatar::after{content:'Photo';position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(92,16,16,0.75),transparent);color:white;font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem;text-align:center;opacity:0;transition:opacity 0.25s;}
+.pcard:hover .pcard-avatar::after{opacity:1;}
+.mem-badge{position:absolute;top:5px;right:5px;background:var(--red-light);color:white;font-size:0.58rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:0.1rem 0.45rem;z-index:2;}
+.pcard-body{padding:0.7rem 0.85rem 0.9rem;}
+.pcard-phase{display:inline-block;font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.12rem 0.55rem;margin-bottom:0.3rem;}
+.pcard-phase.f{background:#fef0f0;color:var(--maroon);}
+.pcard-phase.i{background:#f0f7f0;color:#1e5c3a;}
+.pcard-phase.s{background:#f0f4fa;color:#1a3a6a;}
+.pcard-phase.mgmt{background:var(--grey-light);color:var(--grey-mid);}
+.pcard-phase.support{background:#faf5e8;color:#6a5010;}
+.pcard-name{font-weight:700;font-size:0.84rem;color:var(--grey-dark);line-height:1.2;margin-bottom:0.15rem;}
+.pcard-role{font-size:0.72rem;color:var(--muted);}
+.pcard-role.mem{color:var(--red-light);}
+
+/* Noli tribute */
+.noli-bar{background:var(--grey-light);border:1px solid var(--grey-border);border-left:4px solid var(--red-light);padding:1.3rem 1.6rem;display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-top:1.5rem;}
+.noli-bar img{width:28px;height:28px;object-fit:contain;opacity:0.4;flex-shrink:0;}
+.noli-title{font-weight:700;font-size:0.88rem;color:var(--grey-dark);margin-bottom:0.18rem;}
+.noli-text{font-size:0.8rem;color:var(--muted);}
+
+/* ── SAFETY ── */
+.safety-grid-6{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2rem;}
+@media(max-width:768px){.safety-grid-6{grid-template-columns:1fr;}}
+.sp{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:1.4rem;transition:background 0.2s;}
+.sp:hover{background:rgba(255,255,255,0.09);}
+.sp-num{font-family:'Merriweather',serif;font-size:1.8rem;font-weight:900;color:rgba(255,255,255,0.1);line-height:1;margin-bottom:0.5rem;}
+.sp-icon{width:28px;height:28px;object-fit:contain;filter:brightness(10);opacity:0.35;margin-bottom:0.6rem;display:block;}
+.sp-icon-img{width:42px;height:42px;object-fit:cover;border-radius:50%;margin-bottom:0.6rem;border:2px solid rgba(255,255,255,0.15);}
+.sp-title{font-weight:700;font-size:0.88rem;color:white;margin-bottom:0.25rem;}
+.sp-desc{font-size:0.8rem;color:rgba(255,255,255,0.52);line-height:1.65;}
+.zero-risk-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);padding:1.6rem;margin-top:1.8rem;}
+.zrc-inner{max-width:1200px;margin:0 auto;display:flex;gap:1.5rem;align-items:flex-start;flex-wrap:wrap;}
+.zrc-marker{flex-shrink:0;width:3px;height:100%;background:var(--red-light);align-self:stretch;}
+.zrc-title{font-weight:700;font-size:0.88rem;color:white;margin-bottom:0.3rem;}
+.zrc-text{font-size:0.82rem;color:rgba(255,255,255,0.55);line-height:1.7;}
+
+/* ── NGS TICKER (copied from index) ── */
+.ticker-wrap{background:var(--maroon-deep);border-top:3px solid var(--red-light);display:flex;align-items:stretch;overflow:hidden;height:48px;}
+.ticker-lbl{flex-shrink:0;display:flex;align-items:center;gap:0.45rem;padding:0 1.3rem;background:var(--red-light);color:white;font-size:0.66rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;white-space:nowrap;z-index:2;}
+.ticker-lbl img{width:18px;height:18px;object-fit:contain;filter:brightness(10);}
+.ticker-tw{flex:1;overflow:hidden;position:relative;display:flex;align-items:center;}
+.ticker-tw::before,.ticker-tw::after{content:'';position:absolute;top:0;bottom:0;width:36px;z-index:1;pointer-events:none;}
+.ticker-tw::before{left:0;background:linear-gradient(to right,var(--maroon-deep),transparent);}
+.ticker-tw::after{right:0;background:linear-gradient(to left,var(--maroon-deep),transparent);}
+.ticker-track{display:flex;align-items:center;animation:tickScroll 32s linear infinite;white-space:nowrap;}
+.ticker-track:hover{animation-play-state:paused;}
+@keyframes tickScroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.t-item{display:inline-flex;align-items:center;gap:0.65rem;padding:0 1.8rem;text-decoration:none;border-right:1px solid rgba(255,255,255,0.07);transition:background 0.2s;height:48px;}
+.t-item:hover{background:rgba(255,255,255,0.05);}
+.t-tag{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.7);padding:0.1rem 0.55rem;font-size:0.6rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;white-space:nowrap;flex-shrink:0;}
+.t-head{font-size:0.78rem;font-weight:500;color:rgba(255,255,255,0.75);white-space:nowrap;}
+.t-item:hover .t-head{color:white;}
+.t-arr{color:rgba(255,255,255,0.35);font-size:0.72rem;flex-shrink:0;}
+
+/* ── FOOTER (copied from index) ── */
+.footer{background:#160606;color:white;padding:3.5rem 1.5rem 0;}
+.ft-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2.2fr 1fr 1fr 1.2fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.07);}
+@media(max-width:900px){.ft-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:500px){.ft-grid{grid-template-columns:1fr;}}
+.ft-bl{display:flex;align-items:center;gap:11px;margin-bottom:0.95rem;}
+.ft-bn{font-family:'Merriweather',serif;font-size:0.95rem;font-weight:700;color:white;line-height:1.2;}
+.ft-bn small{display:block;font-family:'Inter',sans-serif;font-size:0.57rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.38);}
+.ft-tag{font-size:0.8rem;color:rgba(255,255,255,0.42);line-height:1.7;margin-bottom:1.2rem;max-width:290px;}
+.ft-socs{display:flex;gap:0.45rem;}
+.ft-soc{width:32px;height:32px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.55);font-size:0.85rem;text-decoration:none;transition:background 0.18s,color 0.18s;}
+.ft-soc:hover{background:var(--maroon);color:white;}
+.ft-ch{font-size:0.65rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:0.9rem;padding-bottom:0.55rem;border-bottom:1px solid rgba(255,255,255,0.07);}
+.ft-links{list-style:none;}
+.ft-links li{margin-bottom:0.45rem;}
+.ft-links a{color:rgba(255,255,255,0.5);font-size:0.82rem;text-decoration:none;transition:color 0.15s;}
+.ft-links a:hover{color:white;}
+.ft-cr{display:flex;align-items:flex-start;gap:0.5rem;margin-bottom:0.6rem;font-size:0.8rem;color:rgba(255,255,255,0.5);}
+.ft-cr a{color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.15s;}
+.ft-cr a:hover{color:white;}
+.ft-bot{max-width:1200px;margin:0 auto;padding:1.1rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;font-size:0.7rem;color:rgba(255,255,255,0.25);}
+
+/* MODAL */
+.modal-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:9999;align-items:center;justify-content:center;padding:1rem;}
+.modal-ov.open{display:flex;}
+.modal-box{background:white;max-width:540px;width:100%;border-top:4px solid var(--maroon);padding:2rem;}
+.modal-ttl{font-family:'Merriweather',serif;font-size:1.35rem;font-weight:700;color:var(--grey-dark);margin-bottom:0.7rem;}
+.modal-body-txt{font-size:0.88rem;color:var(--muted);line-height:1.75;}
+.modal-list{list-style:none;margin-top:0.9rem;}
+.modal-list li{display:flex;align-items:flex-start;gap:0.55rem;font-size:0.85rem;color:var(--muted);padding:0.3rem 0;border-bottom:1px solid var(--grey-border);}
+.modal-list li:last-child{border-bottom:none;}
+.modal-list li::before{content:'■';color:var(--maroon);font-size:0.48rem;flex-shrink:0;margin-top:6px;}
+.modal-close{display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.4rem;background:var(--maroon);color:white;border:none;padding:0.58rem 1.3rem;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;transition:background 0.18s;}
+.modal-close:hover{background:var(--maroon-mid);}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar" id="topBar">
+  <div class="tbi">
+    <span class="tb-left">New Garden School &nbsp;·&nbsp; Stutterheim, Eastern Cape</span>
+    <div class="tb-right">
+      <a href="tel:+27430510459" class="tb-link"><i class="bi bi-telephone"></i>043 051 0459</a>
+      <div class="tb-div"></div>
+      <a href="https://wa.me/27615288073" target="_blank" class="tb-link"><i class="bi bi-whatsapp"></i>WhatsApp</a>
+      <div class="tb-div"></div>
+      <button class="safety-btn" onclick="openSafety()">&#9632; Safety Info</button>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="main-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">
+      <img src="logo-ngs-pastel.png" alt="NGS" class="ngs-logo">
+      <div class="nav-brand-text">New Garden School<small>Stutterheim &nbsp;·&nbsp; Est. 1995</small></div>
+    </a>
+    <button class="nav-ham" onclick="toggleMob()" aria-label="Menu"><i class="bi bi-list" id="mico"></i></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li class="has-dd">
+        <span class="nav-tog">More <i class="bi bi-chevron-down" style="font-size:0.6rem;"></i></span>
+        <div class="dd-menu">
+          <a href="learning.html">Learning</a>
+          <a href="parents.html">For Parents</a>
+        </div>
+      </li>
+      <li><a href="admissions.html" class="nav-cta">Apply 2025</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="mob-nav" id="mobNav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="admissions.html">Admissions</a>
+  <a href="learning.html">Learning</a>
+  <a href="parents.html">For Parents</a>
+  <a href="admissions.html">Apply for 2025 &rarr;</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-top">
+  <div class="page-hero">
+    <div class="page-hero-img"></div>
+    <div class="ph-inner">
+      <div class="ph-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span style="color:rgba(255,255,255,0.7);font-weight:600;">About</span>
+      </div>
+      <div class="ph-eyebrow">Our Story</div>
+      <h1 class="ph-title">About New Garden School</h1>
+      <p class="ph-sub">From a small preschool in a converted house to a thriving community of nearly 200 students — discover the heart and purpose behind New Garden School.</p>
+      <div class="ph-pills">
+        <a href="#history"   class="ph-pill">History</a>
+        <a href="#principal" class="ph-pill">Principal</a>
+        <a href="#mission"   class="ph-pill">Mission</a>
+        <a href="#values"    class="ph-pill">Values</a>
+        <a href="#team"      class="ph-pill">The Team</a>
+        <a href="#safety"    class="ph-pill">Safety</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     HISTORY
+══════════════════════════════ -->
+<section class="sec sec-white" id="history">
+  <div class="sec-inner">
+    <div class="hist-grid">
+      <!-- Visual -->
+      <div class="hist-visual reveal">
+        <div class="hist-img-block">
+          <img src="img-building.jpg" alt="New Garden School building" class="hist-photo">
+          <img src="logo-ngs-pastel.png" alt="" class="hist-logo">
+          <div class="hist-yr-badge">1995<small>Established</small></div>
+        </div>
+        <div class="hist-stats">
+          <div class="hs-item">
+            <div class="hs-num">~200</div>
+            <div class="hs-lbl">Students Today</div>
+          </div>
+          <div class="hs-item">
+            <div class="hs-num">3</div>
+            <div class="hs-lbl">Languages Offered</div>
+          </div>
+        </div>
+      </div>
+      <!-- Text -->
+      <div class="reveal">
+        <div class="sec-label">A Little History</div>
+        <h2 class="sec-title">How New Garden Began</h2>
+        <div class="rule"></div>
+        <p class="sec-desc">New Garden School was started by <strong>Mrs. Shelly Cook in 1995</strong>. She decided that having a preschool close to the Stutterheim High School would be beneficial for both parents and children — and altered the house on the property to make it more suitable as a pre-school.</p>
+        <p class="sec-desc" style="margin-top:0.85rem;">Over the years, the school developed and grew into an institution offering quality education from Grade R to 9.</p>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">1995</div>
+            <div class="tl-text">Mrs. Shelly Cook opens New Garden as a preschool in a converted house near Stutterheim High School.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2006</div>
+            <div class="tl-text">Registered with the Department of Education as an independent institution. Operating as an NPO and PBO.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2011</div>
+            <div class="tl-text">Ownership transferred to the newly established New Garden Educational and Developmental Trust (NGEDT).</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">Today</div>
+            <div class="tl-text">Nearly 200 students, 8 new classrooms added, 15 qualified teachers, Grade R to 9 programme.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- More History expandable -->
+<div class="more-hist-bar">
+  <div class="mh-inner">
+    <div class="sec-label">More of Our History</div>
+    <p class="sec-desc">Established as an independent institution in 2006 and registered with the Department of Education, our school operates as a non-profit organization (NPO) and a public benefit organization (PBO).</p>
+    <div id="mhText">
+      <p class="sec-desc" style="margin-top:0.85rem;">Located in the scenic Eastern Cape, our school began with a modest number of students and a dedicated handful of teachers. In 2011, ownership was transferred to the newly established NGEDT.</p>
+      <p class="sec-desc" style="margin-top:0.85rem;">Since then, our student body has grown significantly, reaching nearly 200 students. We have expanded by adding eight new classrooms and continue to enhance our existing buildings. Our team has grown from a few educators to an entire staff dedicated to high-quality education.</p>
+    </div>
+    <div class="mh-stats">
+      <div class="mh-stat"><div class="mh-num">2006</div><div class="mh-lbl">DoE Registered</div></div>
+      <div class="mh-stat"><div class="mh-num">2011</div><div class="mh-lbl">NGEDT Est.</div></div>
+      <div class="mh-stat"><div class="mh-num">NPO/PBO</div><div class="mh-lbl">Legal Status</div></div>
+    </div>
+    <button class="expand-btn" id="mhBtn" onclick="toggleMH()">
+      <i class="bi bi-plus" id="mhIcon"></i> Read More
+    </button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     PRINCIPAL
+══════════════════════════════ -->
+<section class="sec sec-grey" id="principal">
+  <div class="sec-inner">
+    <div class="principal-grid">
+      <div class="principal-card reveal">
+        <div class="pc-avatar"><img src="logo-ngs-pastel.png" alt="Mr Myburgh"></div>
+        <div class="pc-name">Mr. Jacques Myburgh</div>
+        <div class="pc-role">Principal · New Garden School</div>
+        <div class="pc-badge"><i class="bi bi-calendar3"></i> 9 Years at NGS</div>
+        <blockquote class="pc-quote">
+          "The purpose of education is to educate the whole child — we don't only focus on academic success, but on producing children of strong values and moral character."
+        </blockquote>
+      </div>
+      <div class="reveal">
+        <div class="sec-label">Our Principal</div>
+        <h2 class="sec-title">Guided by Kindness, Hope & Strength</h2>
+        <div class="rule"></div>
+        <p class="sec-desc">At New Garden School, we believe in ensuring that every student is given love and care, in addition to quality education. This vision is possible thanks to the guidance of Mr Myburgh — a highly educated educator with nine years of experience at NGS who embodies the school's values in everything he does.</p>
+        <p class="sec-desc" style="margin-top:0.8rem;">Mr Myburgh leads a team dedicated to nurturing students through education and care.</p>
+        <div class="phil-cards">
+          <div class="phil-card">
+            <div class="phil-icon"><img src="logo-ngs-pastel.png" alt=""></div>
+            <div>
+              <div class="phil-title">Love & Care First</div>
+              <div class="phil-desc">Every student deserves to feel seen, valued and supported — not only academically but as a whole person.</div>
+            </div>
+          </div>
+          <div class="phil-card">
+            <div class="phil-icon"><img src="logo-ngs-pastel.png" alt=""></div>
+            <div>
+              <div class="phil-title">Whole-Child Education</div>
+              <div class="phil-desc">Academic success matters, but so do character, values and becoming an active, responsible citizen.</div>
+            </div>
+          </div>
+          <div class="phil-card">
+            <div class="phil-icon"><img src="logo-ngs-pastel.png" alt=""></div>
+            <div>
+              <div class="phil-title">Community Partnership</div>
+              <div class="phil-desc">Strong relationships between school, parents and the wider Stutterheim community make better learners.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     MISSION
+══════════════════════════════ -->
+<section class="sec sec-white" id="mission">
+  <div class="sec-inner">
+    <div class="sec-label">Our Mission</div>
+    <h2 class="sec-title">Every Child Matters</h2>
+    <div class="rule"></div>
+    <p class="sec-desc">We believe that every child matters, and we strive to provide an education that reflects that belief. Our teachers are passionate about education and work tirelessly to create lessons and experiences that are engaging and effective.</p>
+    <div class="mission-cards">
+      <div class="mc reveal">
+        <img src="logo-ngs-pastel.png" alt="" class="mc-icon">
+        <div class="mc-title">Official CAPS Curriculum</div>
+        <div class="mc-text">We are proud to offer the official South African CAPS curriculum, ensuring our students receive a nationally recognised, high-quality education.</div>
+      </div>
+      <div class="mc reveal">
+        <img src="logo-ngs-pastel.png" alt="" class="mc-icon">
+        <div class="mc-title">Coding & Robotics Pioneer</div>
+        <div class="mc-text">We are a DoE pilot school for the developing Grade R to 9 Coding & Robotics curriculum — placing our students at the forefront of 21st-century learning.</div>
+      </div>
+      <div class="mc reveal">
+        <img src="logo-ngs-pastel.png" alt="" class="mc-icon">
+        <div class="mc-title">Trilingual Education</div>
+        <div class="mc-text">We offer English, Afrikaans and IsiXhosa, fostering linguistic diversity, cultural exchange and a deep appreciation for different perspectives.</div>
+      </div>
+      <div class="mc reveal">
+        <img src="logo-ngs-pastel.png" alt="" class="mc-icon">
+        <div class="mc-title">Beyond the Curriculum</div>
+        <div class="mc-text">Our teachers add to the curriculum to make it more challenging and rewarding, giving every student the opportunity to reach their full potential.</div>
+      </div>
+    </div>
+    <div class="caps-strip">
+      <i class="bi bi-patch-check-fill"></i> Official CAPS School &nbsp;·&nbsp;
+      <i class="bi bi-cpu"></i> Coding & Robotics Pilot &nbsp;·&nbsp;
+      <i class="bi bi-translate"></i> Trilingual — English · Afrikaans · IsiXhosa
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     VALUES
+══════════════════════════════ -->
+<section class="sec sec-grey" id="values">
+  <div class="sec-inner">
+    <div class="t-center">
+      <div class="sec-label">Our Vision & Values</div>
+      <h2 class="sec-title">Six Pillars We Live By</h2>
+      <div class="rule"></div>
+      <p class="sec-desc" style="margin:0 auto;">Our core values help us create an ideal learning environment — one where students learn accountability, citizenship and fairness in every aspect of their daily lives.</p>
+    </div>
+    <div class="values-grid">
+      <div class="vc reveal">
+        <img src="val-trustworthiness.png" alt="Trustworthiness" class="vc-icon">
+        <div class="vc-name">Trustworthiness</div>
+        <div class="vc-desc">We keep our word, act with integrity and build relationships based on honesty and dependability.</div>
+      </div>
+      <div class="vc reveal">
+        <img src="val-citizenship.png" alt="Citizenship" class="vc-icon">
+        <div class="vc-name">Citizenship</div>
+        <div class="vc-desc">We cultivate active citizens who are mindful of their impact on both local communities and the wider world.</div>
+      </div>
+      <div class="vc reveal">
+        <img src="val-responsibility.png" alt="Responsibility" class="vc-icon">
+        <div class="vc-name">Responsibility</div>
+        <div class="vc-desc">Our students learn to be accountable for their choices when interacting with peers, teachers and in their personal lives.</div>
+      </div>
+      <div class="vc reveal">
+        <img src="val-respect.png" alt="Respect" class="vc-icon">
+        <div class="vc-name">Respect</div>
+        <div class="vc-desc">Respect for oneself, for others and for different backgrounds and cultures is woven into everything we do.</div>
+      </div>
+      <div class="vc reveal">
+        <img src="val-caring.png" alt="Caring" class="vc-icon">
+        <div class="vc-name">Caring</div>
+        <div class="vc-desc">We look out for one another with empathy and compassion, creating a school that feels like a second home.</div>
+      </div>
+      <div class="vc reveal">
+        <img src="val-fairness.png" alt="Fairness" class="vc-icon">
+        <div class="vc-name">Fairness</div>
+        <div class="vc-desc">Every child deserves equal opportunity. We create an environment where every voice is heard and valued.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     THE TEAM
+══════════════════════════════ -->
+<section class="sec sec-white" id="team">
+  <div class="sec-inner">
+    <div class="team-header reveal">
+      <div>
+        <div class="sec-label">The New Garden Team</div>
+        <h2 class="sec-title" style="margin-bottom:0;">All Hands In</h2>
+      </div>
+      <div class="ts-strip">
+        <div class="ts-stat"><div class="ts-num">15</div><div class="ts-lbl">Teachers</div></div>
+        <div class="ts-stat"><div class="ts-num">3</div><div class="ts-lbl">HODs</div></div>
+        <div class="ts-stat"><div class="ts-num">6</div><div class="ts-lbl">Support Staff</div></div>
+      </div>
+    </div>
+    <p class="sec-desc">We have a team of 15 qualified, creative and committed teachers dedicated to ensuring every student succeeds academically and personally. Our staff also includes skilled administration, support staff and groundskeepers.</p>
+
+    <!-- Senior Management -->
+    <div class="group-label">Senior Management Team</div>
+    <div class="smt-grid">
+      <div class="pcard smt-card reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase mgmt">Principal</div>
+          <div class="pcard-name">Jacques Myburgh</div>
+          <div class="pcard-role">Principal</div>
+        </div>
+      </div>
+      <div class="pcard smt-card reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase mgmt">Management</div>
+          <div class="pcard-name">Andrea Du Plessis</div>
+          <div class="pcard-role">HOD Grades 1–3</div>
+        </div>
+      </div>
+      <div class="pcard smt-card reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase mgmt">Management</div>
+          <div class="pcard-name">Michelle Bartlett</div>
+          <div class="pcard-role">HOD Grades 4–6</div>
+        </div>
+      </div>
+      <div class="pcard smt-card reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase mgmt">Management</div>
+          <div class="pcard-name">Ananaycia Pietersen</div>
+          <div class="pcard-role">HOD Grades 7–9</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Support Staff -->
+    <div class="group-label">Support Staff & Groundskeepers</div>
+    <div class="staff-grid-3">
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase support">Grounds</div>
+          <div class="pcard-name">DiDi</div>
+          <div class="pcard-role">Head Groundskeeper</div>
+        </div>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase support">Facilities</div>
+          <div class="pcard-name">Ntomboxolo Mandla</div>
+          <div class="pcard-role">Facilities Manager</div>
+        </div>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase support">Facilities</div>
+          <div class="pcard-name">KinKin Mpushe</div>
+          <div class="pcard-role">Facilities Manager</div>
+        </div>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase support">Admin</div>
+          <div class="pcard-name">Karen Aylward</div>
+          <div class="pcard-role">Aftercare & Fundraising</div>
+        </div>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase support">Admin</div>
+          <div class="pcard-name">Lana Els</div>
+          <div class="pcard-role">Reception Office</div>
+        </div>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase support">Finance</div>
+          <div class="pcard-name">Louisa Hatton</div>
+          <div class="pcard-role">Finance Administrator</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Foundation Phase Teachers -->
+    <div class="group-label">Foundation Phase · Grades R – 3</div>
+    <div class="phase-grid-4">
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase f">Grade R</div>
+          <div class="pcard-name">Jessica Arbuthnot</div>
+          <div class="pcard-role">Grade R Class-teacher</div>
+        </div>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase f">Grade 1</div>
+          <div class="pcard-name">Kholiwe Dyosi</div>
+          <div class="pcard-role">Grade 1 Class-teacher</div>
+        </div>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase f">Grade 2</div>
+          <div class="pcard-name">Andrea Du Plessis</div>
+          <div class="pcard-role">Grade 2 Class-teacher</div>
+        </div>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase f">Grade 3</div>
+          <div class="pcard-name">Juanita Bekker</div>
+          <div class="pcard-role">Grade 3 Class-teacher</div>
+        </div>
+      </div>
+      <!-- Noli memorial -->
+      <div class="pcard memorial reveal">
+        <div class="pcard-avatar" style="background:linear-gradient(135deg,#3a0a0a,#7a1a1a);">
+          <img src="logo-ngs-pastel.png" alt="">
+          <span class="mem-badge">In Memory</span>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-phase f">Grade 3</div>
+          <div class="pcard-name">Noli Jikijela</div>
+          <div class="pcard-role mem">2009 – 2024 · Forever in our hearts</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Intermediate Phase Teachers -->
+    <div class="group-label" style="margin-top:2.5rem;">Intermediate Phase · Grades 4 – 6</div>
+    <div class="phase-grid-3">
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase i">Grade 4</div>
+          <div class="pcard-name">Michelle Bartlett</div>
+          <div class="pcard-role">Grade 4 Class-teacher</div>
+        </div>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase i">Grade 5</div>
+          <div class="pcard-name">Zonke Malgas</div>
+          <div class="pcard-role">Grade 5 Class-teacher</div>
+        </div>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase i">Grade 6</div>
+          <div class="pcard-name">Akhona Tintelo</div>
+          <div class="pcard-role">Grade 6 Class-teacher</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Senior Phase Teachers -->
+    <div class="group-label" style="margin-top:2.5rem;">Senior Phase · Grades 7 – 9</div>
+    <div class="phase-grid-4">
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase s">Grade 7</div>
+          <div class="pcard-name">Francis Gyimah</div>
+          <div class="pcard-role">Grade 7 Class-teacher</div>
+        </div>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase s">Grade 8</div>
+          <div class="pcard-name">Ananaycia Pietersen</div>
+          <div class="pcard-role">Grade 8 Class-teacher</div>
+        </div>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase s">Grade 9</div>
+          <div class="pcard-name">Jack Hermans</div>
+          <div class="pcard-role">Grade 9 Class-teacher</div>
+        </div>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase s">Languages</div>
+          <div class="pcard-name">Megan Myburgh</div>
+          <div class="pcard-role">English &amp; Creative Arts</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Noli Tribute Bar -->
+    <div class="noli-bar">
+      <img src="logo-ngs-pastel.png" alt="">
+      <div>
+        <div class="noli-title">In Loving Memory of Ms. Noli Jikijela</div>
+        <div class="noli-text">A beloved teacher, colleague and friend who was the heart of our school from 2009 to 2024. Her legacy lives on in every child she touched.</div>
+      </div>
+      <a href="noli.html" class="btn-o" style="flex-shrink:0;"><i class="bi bi-heart-fill"></i> Read Tributes</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     SAFETY
+══════════════════════════════ -->
+<section class="sec sec-dark" id="safety">
+  <div class="sec-inner">
+    <div class="sec-label w">Safety &amp; Security</div>
+    <h2 class="sec-title w">We Are All About Safety</h2>
+    <div class="rule w"></div>
+    <p class="sec-desc w">At New Garden School, the safety of our students is our highest priority. We have comprehensive, layered security measures in place — so parents can trust their child is protected every day.</p>
+    <div class="safety-grid-6">
+      <div class="sp reveal">
+        <div class="sp-num">01</div>
+        <img src="logo-ngs-pastel.png" alt="" class="sp-icon">
+        <div class="sp-title">24/7 Surveillance</div>
+        <div class="sp-desc">State-of-the-art CCTV covering all areas of campus, with access-controlled gates and secure parking at all times.</div>
+      </div>
+      <div class="sp reveal">
+        <div class="sp-num">02</div>
+        <img src="logo-ngs-pastel.png" alt="" class="sp-icon">
+        <div class="sp-title">Trained & Vigilant Staff</div>
+        <div class="sp-desc">All staff trained to identify and respond calmly and effectively in dangerous situations. Safety protocols reviewed regularly.</div>
+      </div>
+      <div class="sp reveal">
+        <div class="sp-num">03</div>
+        <img src="img-fire.jpg" alt="Fire extinguisher" class="sp-icon-img">
+        <div class="sp-title">Fire Safety & Readiness</div>
+        <div class="sp-desc">Fire extinguishers throughout the premises, regular evacuation drills, and emergency-compliant building design and alarms.</div>
+      </div>
+      <div class="sp reveal">
+        <div class="sp-num">04</div>
+        <img src="logo-ngs-pastel.png" alt="" class="sp-icon">
+        <div class="sp-title">First-Aid Ready</div>
+        <div class="sp-desc">Fully stocked First-Aid station and personnel trained in basic First-Aid on site at all times.</div>
+      </div>
+      <div class="sp reveal">
+        <div class="sp-num">05</div>
+        <img src="logo-ngs-pastel.png" alt="" class="sp-icon">
+        <div class="sp-title">Access-Controlled</div>
+        <div class="sp-desc">Only authorised persons enter the campus. Unannounced spot-checks for alcohol and drugs are conducted regularly.</div>
+      </div>
+      <div class="sp reveal">
+        <div class="sp-num">06</div>
+        <img src="logo-ngs-pastel.png" alt="" class="sp-icon">
+        <div class="sp-title">DBE–SAPS Partnership</div>
+        <div class="sp-desc">Part of the Collaborative Partnership Protocol between the Department of Basic Education and the South African Police Service.</div>
+      </div>
+    </div>
+    <div class="zero-risk-card">
+      <div class="zrc-inner">
+        <div class="zrc-marker"></div>
+        <div>
+          <div class="zrc-title">Zero-Risk Environment</div>
+          <div class="zrc-text">We conduct unannounced spot-checks for alcohol and drugs. We make regular use of a security company and the Police. We are part of the DBE–SAPS Collaborative Partnership Protocol. Safety comes first — always.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NGS NEWS TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-lbl"><img src="logo-ngs-pastel.png" alt=""><span>NGS News</span></div>
+  <div class="ticker-tw">
+    <div class="ticker-track">
+      <a class="t-item" href="ngs-news-edition3.pdf" target="_blank"><span class="t-tag">Term 3&4 · 2024</span><span class="t-head">Third Edition — Highlights, Victories &amp; Celebrations</span><span class="t-arr">→</span></a>
+      <a class="t-item" href="ngs-news-edition2.pdf" target="_blank"><span class="t-tag">Term 2 · 2024</span><span class="t-head">Second Edition — 30 Years of Freedom &amp; Our Pen Pal Programme</span><span class="t-arr">→</span></a>
+      <a class="t-item" href="ngs-news-edition1.pdf" target="_blank"><span class="t-tag">Term 1 · 2024</span><span class="t-head">First Edition — Meet the Editorial Team &amp; Sports Achievements</span><span class="t-arr">→</span></a>
+      <a class="t-item" href="ngs-news-edition3.pdf" target="_blank"><span class="t-tag">Term 3&4 · 2024</span><span class="t-head">Third Edition — Highlights, Victories &amp; Celebrations</span><span class="t-arr">→</span></a>
+      <a class="t-item" href="ngs-news-edition2.pdf" target="_blank"><span class="t-tag">Term 2 · 2024</span><span class="t-head">Second Edition — 30 Years of Freedom &amp; Our Pen Pal Programme</span><span class="t-arr">→</span></a>
+      <a class="t-item" href="ngs-news-edition1.pdf" target="_blank"><span class="t-tag">Term 1 · 2024</span><span class="t-head">First Edition — Meet the Editorial Team &amp; Sports Achievements</span><span class="t-arr">→</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="ft-grid">
+    <div>
+      <div class="ft-bl">
+        <img src="logo-ngs-pastel.png" alt="NGS" class="ngs-logo">
+        <div class="ft-bn">New Garden School<small>Stutterheim &nbsp;·&nbsp; Est. 1995</small></div>
+      </div>
+      <p class="ft-tag">Nurturing young minds from Grade R to 9 in the heart of Stutterheim, Eastern Cape. Where every child matters and every child blossoms.</p>
+      <div class="ft-socs">
+        <a href="https://www.facebook.com/newgardenschool"  target="_blank" class="ft-soc" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/newgardenschool" target="_blank" class="ft-soc" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.youtube.com/@newgardenschool"  target="_blank" class="ft-soc" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        <a href="https://wa.me/27615288073"                 target="_blank" class="ft-soc" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://maps.google.com/?q=6+Forest+View+Rd+Stutterheim" target="_blank" class="ft-soc" aria-label="Maps"><i class="bi bi-geo-alt"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="ft-ch">Quick Links</div>
+      <ul class="ft-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="learning.html">Learning</a></li>
+        <li><a href="parents.html">For Parents</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-ch">Contact</div>
+      <div class="ft-cr"><img src="logo-ngs-pastel.png" alt="" class="ft-bullet"><a href="tel:+27430510459">043 051 0459</a></div>
+      <div class="ft-cr"><img src="logo-ngs-pastel.png" alt="" class="ft-bullet"><a href="https://wa.me/27615288073" target="_blank">061 528 8073 (WhatsApp)</a></div>
+      <div class="ft-cr"><img src="logo-ngs-pastel.png" alt="" class="ft-bullet"><a href="mailto:newgardenschool.office@gmail.com">newgardenschool.office@gmail.com</a></div>
+      <div class="ft-cr"><img src="logo-ngs-pastel.png" alt="" class="ft-bullet"><span>Mon–Thu: 07:00–13:00<br>Fri: 07:30–14:00</span></div>
+    </div>
+    <div>
+      <div class="ft-ch">Find Us</div>
+      <div class="ft-cr"><img src="logo-ngs-pastel.png" alt="" class="ft-bullet"><span>6 Forest View Rd<br>Stutterheim<br>Eastern Cape, 4930</span></div>
+      <a href="https://maps.google.com/?q=6+Forest+View+Rd+Stutterheim" target="_blank" style="display:inline-flex;align-items:center;gap:0.35rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.11);padding:0.42rem 0.85rem;font-size:0.73rem;font-weight:600;color:rgba(255,255,255,0.55);text-decoration:none;margin-top:0.65rem;transition:background 0.18s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'"><i class="bi bi-map"></i> Open in Maps</a>
+      <div class="ft-cr" style="margin-top:0.75rem;"><img src="logo-ngs-pastel.png" alt="" class="ft-bullet"><a href="mailto:newgardenschool.finance@gmail.com">Finance queries</a></div>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <span>&copy; 2026 New Garden School &nbsp;&middot;&nbsp; New Garden Educational Development Trust (NPO/PBO)</span>
+    <span>6 Forest View Rd, Stutterheim, Eastern Cape, 4930</span>
+  </div>
+</footer>
+
+<!-- SAFETY MODAL -->
+<div class="modal-ov" id="safetyModal" onclick="closeSafetyBg(event)">
+  <div class="modal-box">
+    <h2 class="modal-ttl">Safety &amp; Security at NGS</h2>
+    <p class="modal-body-txt">At New Garden School, the safety of every student is our highest priority:</p>
+    <ul class="modal-list">
+      <li>24-hour CCTV surveillance across the entire campus</li>
+      <li>Access-controlled gates — only authorised personnel may enter</li>
+      <li>First-Aid station staffed with trained first responders</li>
+      <li>Regular fire-safety drills and extinguishers throughout</li>
+      <li>Unannounced spot-checks for alcohol and drugs</li>
+      <li>DBE–SAPS Collaborative Partnership Protocol</li>
+      <li>Trained staff and student prefects on duty daily</li>
+    </ul>
+    <button class="modal-close" onclick="closeSafety()"><i class="bi bi-x"></i> Close</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Mobile nav
+  function toggleMob(){
+    const m=document.getElementById('mobNav'),ic=document.getElementById('mico');
+    m.classList.toggle('open');
+    ic.className=m.classList.contains('open')?'bi bi-x-lg':'bi bi-list';
+  }
+  // Safety modal
+  function openSafety(){ document.getElementById('safetyModal').classList.add('open'); }
+  function closeSafety(){ document.getElementById('safetyModal').classList.remove('open'); }
+  function closeSafetyBg(e){ if(e.target===document.getElementById('safetyModal')) closeSafety(); }
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeSafety(); });
+  // More history toggle
+  function toggleMH(){
+    const t=document.getElementById('mhText');
+    const b=document.getElementById('mhBtn');
+    const i=document.getElementById('mhIcon');
+    const open=t.classList.toggle('open');
+    i.className=open?'bi bi-dash':'bi bi-plus';
+    b.innerHTML=open
+      ?'<i class="bi bi-dash" id="mhIcon"></i> Show Less'
+      :'<i class="bi bi-plus" id="mhIcon"></i> Read More';
+  }
+  // Reveal
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');}),{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
