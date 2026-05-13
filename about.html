@@ -275,14 +275,14 @@ a{text-decoration:none;}
 /* ── SAFETY ── */
 .safety-grid-6{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2rem;}
 @media(max-width:768px){.safety-grid-6{grid-template-columns:1fr;}}
-.sp{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:1.4rem;transition:background 0.2s;}
-.sp:hover{background:rgba(255,255,255,0.09);}
+.sp{background:var(--grey-dark);border:1px solid rgba(255,255,255,0.08);padding:1.4rem;transition:background 0.2s;}
+.sp:hover{background:#3a3a3a;}
 .sp-num{font-family:'Merriweather',serif;font-size:1.8rem;font-weight:900;color:rgba(255,255,255,0.1);line-height:1;margin-bottom:0.5rem;}
 .sp-icon{width:28px;height:28px;object-fit:contain;filter:brightness(10);opacity:0.35;margin-bottom:0.6rem;display:block;}
 .sp-icon-img{width:42px;height:42px;object-fit:cover;border-radius:50%;margin-bottom:0.6rem;border:2px solid rgba(255,255,255,0.15);}
 .sp-title{font-weight:700;font-size:0.88rem;color:white;margin-bottom:0.25rem;}
 .sp-desc{font-size:0.8rem;color:rgba(255,255,255,0.52);line-height:1.65;}
-.zero-risk-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);padding:1.6rem;margin-top:1.8rem;}
+.zero-risk-card{background:var(--grey-dark);border:1px solid rgba(255,255,255,0.08);padding:1.6rem;margin-top:1.8rem;}
 .zrc-inner{max-width:1200px;margin:0 auto;display:flex;gap:1.5rem;align-items:flex-start;flex-wrap:wrap;}
 .zrc-marker{flex-shrink:0;width:3px;height:100%;background:var(--red-light);align-self:stretch;}
 .zrc-title{font-weight:700;font-size:0.88rem;color:white;margin-bottom:0.3rem;}
@@ -685,7 +685,7 @@ a{text-decoration:none;}
         <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
         <div class="pcard-body">
           <div class="pcard-phase support">Grounds</div>
-          <div class="pcard-name">DiDi</div>
+          <div class="pcard-name">Sonwabo Ngwele</div>
           <div class="pcard-role">Head Groundskeeper</div>
         </div>
       </div>
@@ -738,7 +738,7 @@ a{text-decoration:none;}
         <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
         <div class="pcard-body">
           <div class="pcard-phase f">Grade R</div>
-          <div class="pcard-name">Jessica Arbuthnot</div>
+          <div class="pcard-name">Jessica Flanegan</div>
           <div class="pcard-role">Grade R Class-teacher</div>
         </div>
       </div>
@@ -782,7 +782,7 @@ a{text-decoration:none;}
 
     <!-- Intermediate Phase Teachers -->
     <div class="group-label" style="margin-top:2.5rem;">Intermediate Phase · Grades 4 – 6</div>
-    <div class="phase-grid-3">
+    <div class="phase-grid-4">
       <div class="pcard reveal">
         <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
         <div class="pcard-body">
@@ -807,11 +807,19 @@ a{text-decoration:none;}
           <div class="pcard-role">Grade 6 Class-teacher</div>
         </div>
       </div>
+      <div class="pcard reveal">
+        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
+        <div class="pcard-body">
+          <div class="pcard-phase i">Languages &amp; Arts</div>
+          <div class="pcard-name">Megan Myburgh</div>
+          <div class="pcard-role">English &amp; Creative Arts</div>
+        </div>
+      </div>
     </div>
 
     <!-- Senior Phase Teachers -->
     <div class="group-label" style="margin-top:2.5rem;">Senior Phase · Grades 7 – 9</div>
-    <div class="phase-grid-4">
+    <div class="phase-grid-3">
       <div class="pcard reveal">
         <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
         <div class="pcard-body">
@@ -832,16 +840,8 @@ a{text-decoration:none;}
         <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
         <div class="pcard-body">
           <div class="pcard-phase s">Grade 9</div>
-          <div class="pcard-name">Jack Hermans</div>
+          <div class="pcard-name">Bianca Kumm</div>
           <div class="pcard-role">Grade 9 Class-teacher</div>
-        </div>
-      </div>
-      <div class="pcard reveal">
-        <div class="pcard-avatar"><img src="logo-ngs-pastel.png" alt=""></div>
-        <div class="pcard-body">
-          <div class="pcard-phase s">Languages</div>
-          <div class="pcard-name">Megan Myburgh</div>
-          <div class="pcard-role">English &amp; Creative Arts</div>
         </div>
       </div>
     </div>
@@ -861,7 +861,7 @@ a{text-decoration:none;}
 <!-- ══════════════════════════════
      SAFETY
 ══════════════════════════════ -->
-<section class="sec sec-dark" id="safety">
+<section class="sec sec-maroon" id="safety">
   <div class="sec-inner">
     <div class="sec-label w">Safety &amp; Security</div>
     <h2 class="sec-title w">We Are All About Safety</h2>
