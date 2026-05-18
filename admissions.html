@@ -327,6 +327,20 @@ a{text-decoration:none;}
 .modal-list li::before{content:'■';color:var(--maroon);font-size:0.48rem;flex-shrink:0;margin-top:6px;}
 .modal-close{display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.4rem;background:var(--maroon);color:white;border:none;padding:0.58rem 1.3rem;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;transition:background 0.18s;}
 .modal-close:hover{background:var(--maroon-mid);}
+
+    /* Contact section: maroon bg, grey blocks */
+    .sec-maroon-contact{background:var(--maroon);}
+    .sec-maroon-contact .sec-label{color:rgba(255,255,255,0.5);}
+    .sec-maroon-contact .sec-label::before{background:rgba(255,255,255,0.4);}
+    .sec-maroon-contact .sec-title{color:white;}
+    .sec-maroon-contact .rule{background:rgba(255,255,255,0.4);}
+    .sec-maroon-contact .sec-desc{color:rgba(255,255,255,0.65);}
+    /* keep contact blocks grey */
+    .sec-maroon-contact .cct{background:rgba(0,0,0,0.18);border-color:rgba(0,0,0,0.2);}
+    .sec-maroon-contact .cct:hover{background:rgba(0,0,0,0.28);}
+    .sec-maroon-contact .cct-icon{background:rgba(0,0,0,0.2);}
+    .sec-maroon-contact .map-btn{background:rgba(0,0,0,0.18);border-color:rgba(0,0,0,0.25);color:rgba(255,255,255,0.7);}
+    .sec-maroon-contact .map-btn:hover{background:rgba(0,0,0,0.3);color:white;}
 </style>
 </head>
 <body>
@@ -811,7 +825,7 @@ a{text-decoration:none;}
 </section>
 
 <!-- ══════ CONTACT ══════ -->
-<section class="sec sec-dark" id="contact">
+<section class="sec sec-maroon-contact" id="contact">
   <div class="sec-inner">
     <div class="sec-label w">Get in Touch</div>
     <h2 class="sec-title w">Contact Us</h2>
@@ -886,9 +900,7 @@ a{text-decoration:none;}
       </div>
       <p class="ft-tag">Nurturing young minds from Grade R to 9 in the heart of Stutterheim, Eastern Cape. Where every child matters and every child blossoms.</p>
       <div class="ft-socs">
-        <a href="https://www.facebook.com/newgardenschool"  target="_blank" class="ft-soc" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/newgardenschool" target="_blank" class="ft-soc" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.youtube.com/@newgardenschool"  target="_blank" class="ft-soc" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        <a href="https://www.facebook.com/groups/154621571250458/"  target="_blank" class="ft-soc" aria-label="Facebook"><i class="bi bi-facebook"></i></a>        <a href="https://www.youtube.com/@newgardenschool"  target="_blank" class="ft-soc" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
         <a href="https://wa.me/27615288073"                 target="_blank" class="ft-soc" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
         <a href="https://maps.google.com/?q=6+Forest+View+Rd+Stutterheim" target="_blank" class="ft-soc" aria-label="Maps"><i class="bi bi-geo-alt"></i></a>
       </div>
