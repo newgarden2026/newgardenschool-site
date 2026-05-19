@@ -319,6 +319,19 @@ a{text-decoration:none;}
       border-radius: 50% !important;
       border: 2px solid rgba(255,255,255,0.2) !important;
     }
+
+    /* Safety section: maroon bg, grey-dark blocks */
+    .sec-maroon-safety{background:var(--maroon);}
+    .sec-maroon-safety .sec-label{color:rgba(255,255,255,0.5);}
+    .sec-maroon-safety .sec-label::before{background:rgba(255,255,255,0.4);}
+    .sec-maroon-safety .sec-title{color:white;}
+    .sec-maroon-safety .rule{background:rgba(255,255,255,0.4);}
+    .sec-maroon-safety .sec-desc{color:rgba(255,255,255,0.65);}
+    /* keep safety cards dark grey */
+    .sec-maroon-safety .sc{background:rgba(0,0,0,0.22);border-color:rgba(0,0,0,0.25);}
+    .sec-maroon-safety .sc:hover{background:rgba(0,0,0,0.32);}
+    /* bottom link row */
+    .sec-maroon-safety .safety-link-row{background:rgba(0,0,0,0.2);border-color:rgba(0,0,0,0.25);}
 </style>
 </head>
 <body>
@@ -601,7 +614,7 @@ a{text-decoration:none;}
 </section>
 
 <!-- SAFETY -->
-<section class="sec sec-dark" id="safety">
+<section class="sec sec-maroon-safety" id="safety">
   <div class="sec-inner">
     <div class="sec-label w">Safety &amp; Security</div>
     <h2 class="sec-title w">Your Child's Safety Is Our Priority</h2>
@@ -660,8 +673,7 @@ a{text-decoration:none;}
       </div>
       <p class="ft-tag">Nurturing young minds from Grade R to 9 in the heart of Stutterheim, Eastern Cape. Where every child matters and every child blossoms.</p>
       <div class="ft-socs">
-        <a href="https://www.facebook.com/newgardenschool"  target="_blank" class="ft-soc" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/newgardenschool" target="_blank" class="ft-soc" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/groups/154621571250458/"  target="_blank" class="ft-soc" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://www.youtube.com/@newgardenschool"  target="_blank" class="ft-soc" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
         <a href="https://wa.me/27615288073"                 target="_blank" class="ft-soc" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
         <a href="https://maps.google.com/?q=6+Forest+View+Rd+Stutterheim" target="_blank" class="ft-soc" aria-label="Maps"><i class="bi bi-geo-alt"></i></a>
