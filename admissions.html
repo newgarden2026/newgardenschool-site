@@ -36,22 +36,39 @@ html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);line-height:1.7;}
 h1,h2,h3,h4{font-family:'Merriweather',serif;line-height:1.2;}
 a{text-decoration:none;}
- 
+
 /* ─── SHARED CHROME ────────────────────────────────────── */
 .ngs-logo{height:42px;width:42px;object-fit:contain;display:block;}
 .ft-bullet{height:15px;width:15px;object-fit:contain;flex-shrink:0;margin-top:3px;opacity:0.55;filter:brightness(3);}
- 
-.top-bar{position:fixed;top:0;left:0;right:0;z-index:1001;background:var(--maroon-deep);height:var(--top-h);display:flex;align-items:center;padding:0 1.5rem;}
-.tbi{max-width:1200px;width:100%;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
-.tb-left{font-size:0.7rem;color:rgba(255,255,255,0.58);letter-spacing:0.05em;}
-.tb-right{display:flex;align-items:center;gap:1rem;}
-.tb-link{font-size:0.7rem;color:rgba(255,255,255,0.7);transition:color 0.15s;display:flex;align-items:center;gap:0.3rem;letter-spacing:0.04em;}
+
+.top-bar{position:fixed;top:0;left:0;right:0;z-index:1001;background:var(--maroon-deep);height:var(--top-h);display:flex;align-items:center;padding:0 1.2rem;}
+.tbi{max-width:1200px;width:100%;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:0.5rem;}
+.tb-left{font-size:0.7rem;color:rgba(255,255,255,0.58);letter-spacing:0.05em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.tb-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0;}
+.tb-link{font-size:0.7rem;color:rgba(255,255,255,0.7);transition:color 0.15s;display:flex;align-items:center;gap:0.3rem;letter-spacing:0.04em;white-space:nowrap;}
 .tb-link:hover{color:white;}
 .tb-link i{font-size:0.72rem;}
-.tb-div{width:1px;height:12px;background:rgba(255,255,255,0.18);}
-.safety-btn{font-size:0.68rem;font-weight:600;background:rgba(255,255,255,0.12);color:white;border:1px solid rgba(255,255,255,0.25);padding:0.15rem 0.65rem;cursor:pointer;letter-spacing:0.05em;transition:background 0.2s;}
+.tb-div{width:1px;height:12px;background:rgba(255,255,255,0.18);flex-shrink:0;}
+.safety-btn{font-size:0.68rem;font-weight:600;background:rgba(255,255,255,0.12);color:white;border:1px solid rgba(255,255,255,0.25);padding:0.15rem 0.65rem;cursor:pointer;letter-spacing:0.05em;transition:background 0.2s;white-space:nowrap;flex-shrink:0;}
 .safety-btn:hover{background:rgba(255,255,255,0.22);}
- 
+/* ── TOP BAR RESPONSIVE ── */
+/* Hide address text on tablet */
+@media(max-width:860px){
+  .tb-left{display:none;}
+}
+/* On small mobile: hide phone & WA text labels, show icons only, tighten gap */
+@media(max-width:540px){
+  .tb-right{gap:0.4rem;}
+  .tb-link span{display:none;}
+  .tb-link i{font-size:0.85rem;}
+  .tb-div{display:none;}
+  .safety-btn{font-size:0.6rem;padding:0.12rem 0.5rem;letter-spacing:0.03em;}
+}
+/* On very small screens stack safety btn text shorter */
+@media(max-width:360px){
+  .safety-btn{padding:0.1rem 0.4rem;font-size:0.55rem;}
+}
+
 .main-nav{position:fixed;top:var(--top-h);left:0;right:0;z-index:1000;background:var(--maroon);height:var(--nav-h);display:flex;align-items:center;padding:0 1.5rem;box-shadow:0 2px 14px rgba(0,0,0,0.28);}
 .nav-inner{max-width:1200px;width:100%;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
 .nav-brand{display:flex;align-items:center;gap:12px;}
@@ -76,7 +93,7 @@ a{text-decoration:none;}
 .mob-nav a:hover{background:rgba(255,255,255,0.09);color:white;}
 @media(max-width:900px){.nav-links{display:none;}.nav-ham{display:block;}}
 .page-top{padding-top:calc(var(--top-h) + var(--nav-h));}
- 
+
 /* ─── SECTION SYSTEM ───────────────────────────────────── */
 .sec{padding:5rem 1.5rem;}
 .sec-inner{max-width:1200px;margin:0 auto;}
@@ -85,7 +102,7 @@ a{text-decoration:none;}
 .sec-cream{background:var(--cream);}
 .sec-dark{background:var(--grey-dark);}
 .sec-maroon{background:var(--maroon);}
- 
+
 .sec-label{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--maroon);margin-bottom:0.65rem;}
 .sec-label::before{content:'';display:block;width:22px;height:2px;background:var(--maroon);}
 .sec-label.w{color:rgba(255,255,255,0.5);}
@@ -99,7 +116,7 @@ a{text-decoration:none;}
 .t-center{text-align:center;}
 .t-center .rule,.t-center .sec-label{margin-left:auto;margin-right:auto;}
 .t-center .sec-label{display:inline-flex;}
- 
+
 .btn-p{display:inline-flex;align-items:center;gap:0.4rem;background:var(--maroon);color:white;padding:0.62rem 1.5rem;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;transition:background 0.18s,transform 0.18s;border:none;cursor:pointer;}
 .btn-p:hover{background:var(--maroon-mid);transform:translateY(-1px);color:white;}
 .btn-o{display:inline-flex;align-items:center;gap:0.4rem;border:2px solid var(--maroon);color:var(--maroon);padding:0.6rem 1.5rem;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.18s;}
@@ -108,10 +125,10 @@ a{text-decoration:none;}
 .btn-w:hover{background:#fdf0f0;color:var(--maroon);}
 .btn-wa{display:inline-flex;align-items:center;gap:0.4rem;background:#25D366;color:white;padding:0.62rem 1.5rem;font-size:0.8rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;transition:background 0.18s,transform 0.18s;}
 .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px);color:white;}
- 
+
 .reveal{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease;}
 .reveal.in{opacity:1;transform:translateY(0);}
- 
+
 /* ─── PAGE HERO ────────────────────────────────────────── */
 .page-hero{
   position:relative;
@@ -149,7 +166,7 @@ a{text-decoration:none;}
 .phc-icon i{font-size:0.82rem;color:var(--maroon);}
 .phc-label{font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);}
 .phc-val{font-weight:700;color:var(--grey-dark);font-size:0.83rem;}
- 
+
 /* ─── OVERVIEW STRIP ───────────────────────────────────── */
 .ov-strip{background:var(--grey-dark);padding:1.2rem 1.5rem;}
 .ov-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-evenly;gap:1rem;}
@@ -157,7 +174,7 @@ a{text-decoration:none;}
 .ov-num{font-family:'Merriweather',serif;font-size:1.75rem;font-weight:900;color:white;line-height:1;}
 .ov-num span{color:#e88;}
 .ov-lbl{font-size:0.66rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:0.1rem;}
- 
+
 /* ─── PROCESS STEPS ────────────────────────────────────── */
 .steps-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:0;}
 @media(max-width:820px){.steps-grid{grid-template-columns:1fr;gap:2.5rem;}}
@@ -182,7 +199,7 @@ a{text-decoration:none;}
 .cc-val a{color:white;}
 .cc-val a:hover{color:rgba(255,255,255,0.75);}
 .cc-btns{display:flex;flex-direction:column;gap:0.6rem;margin-top:1.6rem;}
- 
+
 /* ─── FEES SECTION ─────────────────────────────────────── */
 .fees-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem;}
 .fees-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
@@ -223,7 +240,7 @@ a{text-decoration:none;}
 .cn-icon{font-size:1.2rem;color:var(--maroon);flex-shrink:0;margin-top:2px;}
 .cn-title{font-weight:700;font-size:0.85rem;color:var(--grey-dark);margin-bottom:0.2rem;}
 .cn-text{font-size:0.8rem;color:var(--muted);line-height:1.65;}
- 
+
 /* ─── PAYMENT SECTION ──────────────────────────────────── */
 .payment-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
 @media(max-width:820px){.payment-grid{grid-template-columns:1fr;gap:2.5rem;}}
@@ -243,7 +260,7 @@ a{text-decoration:none;}
 .fb-row a{color:var(--grey-mid);transition:color 0.15s;}
 .fb-row a:hover{color:var(--maroon);}
 .fb-row strong{color:var(--grey-dark);}
- 
+
 /* ─── FAQ ──────────────────────────────────────────────── */
 .faq-list{max-width:800px;margin:2.2rem auto 0;}
 .faq-item{border:1px solid var(--grey-border);border-top:none;background:white;}
@@ -259,7 +276,7 @@ a{text-decoration:none;}
 .faq-a ul li{margin-bottom:0.3rem;}
 .faq-a a{color:var(--maroon);font-weight:600;}
 .faq-a a:hover{color:var(--maroon-mid);}
- 
+
 /* ─── CONTACT SECTION ──────────────────────────────────── */
 .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;margin-top:2rem;}
 @media(max-width:640px){.contact-grid{grid-template-columns:1fr;}}
@@ -274,7 +291,7 @@ a{text-decoration:none;}
 .cct-note{font-size:0.74rem;color:rgba(255,255,255,0.42);margin-top:0.15rem;line-height:1.5;}
 .map-btn{display:inline-flex;align-items:center;gap:0.35rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);color:rgba(255,255,255,0.65);padding:0.45rem 0.95rem;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;transition:background 0.18s;margin-top:0.7rem;}
 .map-btn:hover{background:rgba(255,255,255,0.14);color:white;}
- 
+
 /* ─── TICKER ───────────────────────────────────────────── */
 .ticker-wrap{background:var(--maroon-deep);border-top:3px solid var(--red-light);display:flex;align-items:stretch;overflow:hidden;height:48px;}
 .ticker-lbl{flex-shrink:0;display:flex;align-items:center;gap:0.45rem;padding:0 1.3rem;background:var(--red-light);color:white;font-size:0.66rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;white-space:nowrap;z-index:2;}
@@ -292,7 +309,7 @@ a{text-decoration:none;}
 .t-head{font-size:0.78rem;font-weight:500;color:rgba(255,255,255,0.75);white-space:nowrap;}
 .t-item:hover .t-head{color:white;}
 .t-arr{color:rgba(255,255,255,0.35);font-size:0.72rem;flex-shrink:0;}
- 
+
 /* ─── FOOTER ───────────────────────────────────────────── */
 .footer{background:#160606;color:white;padding:3.5rem 1.5rem 0;}
 .ft-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2.2fr 1fr 1fr 1.2fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.07);}
@@ -314,7 +331,7 @@ a{text-decoration:none;}
 .ft-cr a{color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.15s;}
 .ft-cr a:hover{color:white;}
 .ft-bot{max-width:1200px;margin:0 auto;padding:1.1rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;font-size:0.7rem;color:rgba(255,255,255,0.25);}
- 
+
 /* ─── MODAL ────────────────────────────────────────────── */
 .modal-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:9999;align-items:center;justify-content:center;padding:1rem;}
 .modal-ov.open{display:flex;}
@@ -327,7 +344,7 @@ a{text-decoration:none;}
 .modal-list li::before{content:'■';color:var(--maroon);font-size:0.48rem;flex-shrink:0;margin-top:6px;}
 .modal-close{display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.4rem;background:var(--maroon);color:white;border:none;padding:0.58rem 1.3rem;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;transition:background 0.18s;}
 .modal-close:hover{background:var(--maroon-mid);}
- 
+
     /* Contact section: maroon bg, grey blocks */
     .sec-maroon-contact{background:var(--maroon);}
     .sec-maroon-contact .sec-label{color:rgba(255,255,255,0.5);}
@@ -344,21 +361,21 @@ a{text-decoration:none;}
 </style>
 </head>
 <body>
- 
+
 <!-- ══════ TOP BAR ══════ -->
 <div class="top-bar">
   <div class="tbi">
     <span class="tb-left">New Garden School &nbsp;·&nbsp; Stutterheim, Eastern Cape</span>
     <div class="tb-right">
-      <a href="tel:+27430510459" class="tb-link"><i class="bi bi-telephone"></i>043 051 0459</a>
+      <a href="tel:+27430510459" class="tb-link"><i class="bi bi-telephone"></i><span>043 051 0459</span></a>
       <div class="tb-div"></div>
-      <a href="https://wa.me/27615288073" target="_blank" class="tb-link"><i class="bi bi-whatsapp"></i>WhatsApp</a>
+      <a href="https://wa.me/27615288073" target="_blank" class="tb-link"><i class="bi bi-whatsapp"></i><span>WhatsApp</span></a>
       <div class="tb-div"></div>
-      <button class="safety-btn" onclick="openSafety()">&#9632; Safety Info</button>
+      <button class="safety-btn" onclick="openSafety()">&#9632; <span>Safety Info</span></button>
     </div>
   </div>
 </div>
- 
+
 <!-- ══════ NAV ══════ -->
 <nav class="main-nav">
   <div class="nav-inner">
@@ -390,7 +407,7 @@ a{text-decoration:none;}
   <a href="parents.html">For Parents</a>
   <a href="admissions.html">Apply for 2026 &rarr;</a>
 </div>
- 
+
 <!-- ══════ PAGE HERO ══════ -->
 <div class="page-top">
   <div class="page-hero">
@@ -447,7 +464,7 @@ a{text-decoration:none;}
     </div>
   </div>
 </div>
- 
+
 <!-- ══════ OVERVIEW STRIP ══════ -->
 <div class="ov-strip">
   <div class="ov-inner">
@@ -458,7 +475,7 @@ a{text-decoration:none;}
     <div class="ov-item"><div class="ov-num">Flex</div><div class="ov-lbl">Plans Available</div></div>
   </div>
 </div>
- 
+
 <!-- ══════ HOW TO APPLY ══════ -->
 <section class="sec sec-white" id="process">
   <div class="sec-inner">
@@ -558,7 +575,7 @@ a{text-decoration:none;}
     </div>
   </div>
 </section>
- 
+
 <!-- ══════ FEES ══════ -->
 <section class="sec sec-grey" id="fees">
   <div class="sec-inner">
@@ -570,7 +587,7 @@ a{text-decoration:none;}
       <a href="Fees_for_2025.pdf" target="_blank" class="btn-p"><i class="bi bi-file-earmark-pdf"></i> Download Fee Schedule</a>
     </div>
     <p class="sec-desc" style="margin-bottom:2rem;">At New Garden School, our students come first — and that includes their financial needs. The annual school fee is <strong style="color:var(--grey-dark);">R23 650</strong> with curriculum included. We offer four payment options to suit your family's budget.</p>
- 
+
     <div class="fees-grid">
       <!-- Option 1 -->
       <div class="fee-card reveal">
@@ -637,7 +654,7 @@ a{text-decoration:none;}
         </div>
       </div>
     </div>
- 
+
     <!-- Option 4: Full annual fee -->
     <div class="fee-full-card reveal">
       <div>
@@ -652,7 +669,7 @@ a{text-decoration:none;}
         <div class="ffc-note">Full year · paid before re-opening<br>Standard annual fee: R23 650</div>
       </div>
     </div>
- 
+
     <!-- What's included note -->
     <div class="curriculum-note reveal">
       <div class="cn-icon"><i class="bi bi-info-circle-fill"></i></div>
@@ -663,7 +680,7 @@ a{text-decoration:none;}
     </div>
   </div>
 </section>
- 
+
 <!-- ══════ PAYMENT OPTIONS ══════ -->
 <section class="sec sec-white" id="payment">
   <div class="sec-inner">
@@ -706,7 +723,7 @@ a{text-decoration:none;}
           <div class="fb-row"><i class="bi bi-telephone-fill"></i><span><a href="tel:+27430510459">043 051 0459</a></span></div>
           <div class="fb-row"><i class="bi bi-clock-fill"></i><span><strong>Mon–Thu:</strong> 07:00–15:00 &nbsp;·&nbsp; <strong>Fri:</strong> 07:00–14:00</span></div>
         </div>
- 
+
         <div style="margin-top:1.4rem;background:white;border:1px solid var(--grey-border);border-top:3px solid var(--grey-dark);padding:1.6rem;">
           <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem;"><i class="bi bi-bank" style="color:var(--maroon);"></i> EFT Payments</div>
           <p style="font-size:0.84rem;color:var(--muted);line-height:1.65;margin-bottom:0.9rem;">EFT payments are accepted. Please contact the finance office to obtain our banking details.</p>
@@ -716,7 +733,7 @@ a{text-decoration:none;}
     </div>
   </div>
 </section>
- 
+
 <!-- ══════ FAQ ══════ -->
 <section class="sec sec-grey" id="faq">
   <div class="sec-inner">
@@ -726,7 +743,7 @@ a{text-decoration:none;}
       <p class="sec-desc" style="margin:0 auto;">Everything families need to know about joining New Garden School.</p>
     </div>
     <div class="faq-list">
- 
+
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           What are the school hours at New Garden?
@@ -737,7 +754,7 @@ a{text-decoration:none;}
           Office hours: <strong>Mon–Thu 07:00–13:00 &nbsp;·&nbsp; Fri 07:30–14:00</strong>
         </div>
       </div>
- 
+
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           Where is New Garden School located?
@@ -748,7 +765,7 @@ a{text-decoration:none;}
           <a href="https://maps.google.com/?q=6+Forest+View+Rd+Stutterheim" target="_blank">Open in Google Maps &rarr;</a>
         </div>
       </div>
- 
+
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           How long does the admissions process take?
@@ -759,7 +776,7 @@ a{text-decoration:none;}
           Once reviewed, families are notified within <strong>5 business days</strong>. If accepted, you have <strong>2 weeks</strong> to submit enrolment paperwork and secure your child's place. We strongly encourage early applications.
         </div>
       </div>
- 
+
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           Why does my child need to be interviewed?
@@ -776,7 +793,7 @@ a{text-decoration:none;}
           It is a friendly, low-pressure conversation — not a test.
         </div>
       </div>
- 
+
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           What payment options are available?
@@ -793,7 +810,7 @@ a{text-decoration:none;}
           You can pay by EFT, card (swipe/tap) or cash at the school. For EFT banking details, contact the finance office at <a href="mailto:finance@newgardenschool.org">finance@newgardenschool.org</a>.
         </div>
       </div>
- 
+
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           Will someone help me with registration and payment?
@@ -808,7 +825,7 @@ a{text-decoration:none;}
           </ul>
         </div>
       </div>
- 
+
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           What does the curriculum fee cover?
@@ -819,11 +836,11 @@ a{text-decoration:none;}
           All of this is included in the annual fee of R23 650.
         </div>
       </div>
- 
+
     </div>
   </div>
 </section>
- 
+
 <!-- ══════ CONTACT ══════ -->
 <section class="sec sec-maroon-contact" id="contact">
   <div class="sec-inner">
@@ -874,7 +891,7 @@ a{text-decoration:none;}
     </div>
   </div>
 </section>
- 
+
 <!-- ══════ NGS TICKER ══════ -->
 <div class="ticker-wrap">
   <div class="ticker-lbl"><img src="logo-ngs-pastel.png" alt=""> NGS News</div>
@@ -889,7 +906,7 @@ a{text-decoration:none;}
     </div>
   </div>
 </div>
- 
+
 <!-- ══════ FOOTER ══════ -->
 <footer class="footer">
   <div class="ft-grid">
@@ -936,7 +953,7 @@ a{text-decoration:none;}
     <span>6 Forest View Rd, Stutterheim, Eastern Cape, 4930</span>
   </div>
 </footer>
- 
+
 <!-- ══════ SAFETY MODAL ══════ -->
 <div class="modal-ov" id="safetyModal" onclick="closeSafetyBg(event)">
   <div class="modal-box">
@@ -954,7 +971,7 @@ a{text-decoration:none;}
     <button class="modal-close" onclick="closeSafety()"><i class="bi bi-x"></i> Close</button>
   </div>
 </div>
- 
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   // Mobile nav
